@@ -25,18 +25,53 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box; /* 🔥 ESSA LINHA RESOLVE O ESTOURO */
+  box-sizing: border-box;
   background: rgba(0,0,0,0.7);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
+/* LOGO */
 .logo {
   color: #FF4D00;
   font-weight: 600;
   font-size: 20px;
 }
 
+/* MENU */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #FF4D00;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* BOTÃO */
 .btn {
   background: linear-gradient(45deg, #FF4D00, #ff7a00);
   padding: 10px 18px;
@@ -60,7 +95,6 @@ header {
 
 .hero-content {
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .hero h1 {
@@ -154,17 +188,27 @@ footer {
   bottom: 25px;
   right: 25px;
   background: #25D366;
-  padding: 16px;
+  padding: 14px;
   border-radius: 50%;
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.whatsapp img {
+  width: 28px;
+  height: 28px;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
   header {
     padding: 15px 20px;
+  }
+
+  .menu {
+    display: none;
   }
 
   .hero h1 {
@@ -190,9 +234,7 @@ footer {
     <a href="#">Contato</a>
   </nav>
 
-  <a class="btn whatsapp-btn" href="https://wa.me/5584898775048">
-    WhatsApp
-  </a>
+  <a class="btn" href="https://wa.me/5584898775048">WhatsApp</a>
 </header>
 
 <section class="hero">
@@ -207,14 +249,13 @@ footer {
   <h2>Imóveis em destaque</h2>
 
   <div class="grid">
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
       <div class="card-content">
         <div class="tag">Temporada</div>
         <h3>Flat em Ponta Negra</h3>
         <div class="price">R$ 250 / diária</div>
-        <a class="btn" href="https://wa.me/5584898775048">Falar</a>
+        <a class="btn" href="#">Falar</a>
       </div>
     </div>
 
@@ -224,7 +265,7 @@ footer {
         <div class="tag">Aluguel</div>
         <h3>Apartamento 2 quartos</h3>
         <div class="price">R$ 1.200 / mês</div>
-        <a class="btn" href="https://wa.me/5584898775048">Falar</a>
+        <a class="btn" href="#">Falar</a>
       </div>
     </div>
 
@@ -234,10 +275,9 @@ footer {
         <div class="tag">Venda</div>
         <h3>Beira Mar Premium</h3>
         <div class="price">R$ 320.000</div>
-        <a class="btn" href="https://wa.me/5584898775048">Falar</a>
+        <a class="btn" href="#">Falar</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -267,9 +307,8 @@ footer {
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5584898775048" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50" height="50">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
-  
 
 </body>
 </html>

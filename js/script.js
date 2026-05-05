@@ -34,3 +34,6 @@ imoveis.forEach(imovel => {
     aluguel.appendChild(card);
   }
 });
+function toggleMenu() {
+  document.querySelector(".navbar nav").classList.toggle("active");
+}

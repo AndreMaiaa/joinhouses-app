@@ -1,44 +1,35 @@
 function formatar(valor){
-    return valor.toLocaleString('pt-BR', {
+    return valor.toLocaleString('pt-BR',{
         style:'currency',
         currency:'BRL'
     });
 }
 
 function criarCard(imovel){
-    const div = document.createElement('div');
-    div.className = 'property-card';
+    return `
+        <div class="property-card">
+            <img loading="lazy" src="${imovel.imagem}" alt="${imovel.titulo}">
 
-    div.innerHTML = `
-        <img src="${imovel.imagem}" alt="${imovel.titulo}">
+            <div class="property-info">
+                <span class="badge">${imovel.tipo}</span>
 
-        <div class="property-info">
-            <h3>${imovel.titulo}</h3>
-            <p>${imovel.bairro} - ${imovel.cidade}</p>
-            <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
-            <strong>${formatar(imovel.preco)}</strong>
+                <h3>${imovel.titulo}</h3>
+                <p>${imovel.bairro} - ${imovel.cidade}</p>
+                <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
+                <strong>${formatar(imovel.preco)}</strong>
 
-            <a href="imovel.html?id=${imovel.id}" class="botao">
-                Ver detalhes
-            </a>
+                <a href="imovel.html?id=${imovel.id}" class="botao">
+                    Ver detalhes
+                </a>
+            </div>
         </div>
     `;
-
-    return div;
 }
 
 imoveis.forEach(imovel => {
-    const card = criarCard(imovel);
+    const container = document.getElementById(imovel.tipo);
 
-    if(imovel.tipo === 'venda'){
-        document.getElementById('venda').appendChild(card);
-    }
-
-    if(imovel.tipo === 'aluguel'){
-        document.getElementById('aluguel').appendChild(card);
-    }
-
-    if(imovel.tipo === 'temporada'){
-        document.getElementById('temporada').appendChild(card);
+    if(container){
+        container.innerHTML += criarCard(imovel);
     }
 });

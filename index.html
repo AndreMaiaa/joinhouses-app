@@ -1,82 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join House</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join House | Venda, Aluguel e Temporada</title>
+    <meta name="description" content="Compra, venda, aluguel tradicional e locação por temporada em Natal.">
 
-  <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header class="navbar">
-  <div class="menu-toggle" onclick="toggleMenu()">
-  <div></div>
-  <div></div>
-  <div></div>
-  </div>
-  <div class="container nav-content">
-    <div class="logo">Join House</div>
+    <div class="container nav-content">
+        <div class="logo">Join House</div>
 
-    <nav>
-      <a href="#">Início</a>
-      <a href="#imoveis">Imóveis</a>
-      <a href="#contato">Contato</a>
-    </nav>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#venda-section">Comprar</a>
+            <a href="#aluguel-section">Alugar</a>
+            <a href="#temporada-section">Temporada</a>
+            <a href="#proprietario">Anunciar Imóvel</a>
+            <a href="#contato">Contato</a>
+        </nav>
 
-    <a href="/crm" class="btn-crm">Acessar CRM</a>
-  </div>
+        <a href="/crm" class="btn-crm">Área do Corretor</a>
+    </div>
 </header>
 
-<section class="hero">
-  <div class="overlay"></div>
+<section class="hero" id="inicio">
+    <div class="overlay"></div>
 
-  <div class="hero-content">
-    <h1>Encontre seu imóvel ideal</h1>
-    <p>Compra, venda e aluguel com atendimento profissional</p>
+    <div class="hero-content">
+        <h1>Seu imóvel, sua próxima oportunidade</h1>
+        <p>
+            Compra, venda, aluguel tradicional e locação por temporada
+            com atendimento premium em Natal/RN.
+        </p>
 
-    <a href="#imoveis" class="btn-principal">Ver imóveis</a>
-  </div>
+        <div class="hero-buttons">
+            <a href="#venda-section" class="btn-primary">Comprar</a>
+            <a href="#aluguel-section" class="btn-secondary">Alugar</a>
+            <a href="#temporada-section" class="btn-secondary">Temporada</a>
+        </div>
+    </div>
 </section>
 
-<section class="imoveis-section" id="imoveis">
-  <div class="container">
+<section class="stats">
+    <div class="container stats-grid">
+        <div>
+            <h2>+120</h2>
+            <p>Imóveis administrados</p>
+        </div>
 
-    <h2>Imóveis à venda</h2>
-    <div id="venda" class="grid"></div>
+        <div>
+            <h2>+300</h2>
+            <p>Clientes atendidos</p>
+        </div>
 
-    <h2>Para aluguel</h2>
-    <div id="aluguel" class="grid"></div>
+        <div>
+            <h2>+50</h2>
+            <p>Imóveis vendidos</p>
+        </div>
+    </div>
+</section>
 
-  </div>
+<section class="imoveis-section" id="venda-section">
+    <div class="container">
+        <h2>Imóveis à Venda</h2>
+        <div id="venda" class="grid"></div>
+    </div>
+</section>
+
+<section class="imoveis-section" id="aluguel-section">
+    <div class="container">
+        <h2>Aluguel Tradicional</h2>
+        <div id="aluguel" class="grid"></div>
+    </div>
+</section>
+
+<section class="imoveis-section" id="temporada-section">
+    <div class="container">
+        <h2>Locação por Temporada</h2>
+        <div id="temporada" class="grid"></div>
+    </div>
+</section>
+
+<section class="proprietario-section" id="proprietario">
+    <div class="container">
+        <h2>Tem um imóvel?</h2>
+        <p>
+            Anuncie conosco e aumente sua rentabilidade com gestão profissional.
+        </p>
+
+        <a href="https://wa.me/5584987755048" class="btn-primary">
+            Quero anunciar meu imóvel
+        </a>
+    </div>
 </section>
 
 <footer class="footer" id="contato">
-  <div class="container footer-grid">
+    <div class="container footer-grid">
 
-    <div>
-      <h3>Join House</h3>
-      <p>Especialistas em imóveis em Natal</p>
+        <div>
+            <h3>Join House</h3>
+            <p>Especialistas em imóveis em Natal/RN</p>
+        </div>
+
+        <div>
+            <h4>Contato</h4>
+            <p>📞 (84) 98775-5048</p>
+            <p>📧 contato@joinhouse.com</p>
+        </div>
+
+        <div>
+            <h4>Serviços</h4>
+            <p>Venda</p>
+            <p>Aluguel</p>
+            <p>Temporada</p>
+        </div>
+
     </div>
-
-    <div>
-      <h4>Contato</h4>
-      <p>📞 (84) 98775-5048</p>
-      <p>📧 contato@joinhouse.com</p>
-    </div>
-
-    <div>
-      <h4>Links</h4>
-      <p><a href="#">Início</a></p>
-      <p><a href="#imoveis">Imóveis</a></p>
-    </div>
-
-  </div>
 </footer>
 
 <script src="js/data.js"></script>
 <script src="js/script.js"></script>
-
 </body>
 </html>

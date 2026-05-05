@@ -21,7 +21,7 @@ function criarCard(imovel, index) {
       <h3>${imovel.titulo}</h3>
       <p>${imovel.descricao}</p>
       <p>📍 ${imovel.bairro} - ${imovel.cidade}</p>
-      <p>🛏 ${imovel.quartos} | 🚿 ${imovel.banheiros} | 🚗 ${imovel.vagas}</p><p>📐 ${imovel.area}m²</p>
+      <p>🛏 ${imovel.quartos} | 🚿 ${imovel.banheiros} | 🚗 ${imovel.vagas} | 📐 ${imovel.area}m²</p>
       
       <p><strong>${formatarPreco(imovel.preco)}</strong></p>
 

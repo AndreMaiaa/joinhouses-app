@@ -1,50 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Join Houses</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #000;
-      color: #fff;
-    }
-    header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
-    }
-    h1 {
-      color: #FF4D00;
-    }
-    .btn {
-      background: #FF4D00;
-      padding: 10px 15px;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .container {
-      padding: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Join Houses</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  color: #FF4D00;
+  font-size: 22px;
+}
+
+.btn {
+  background: #FF4D00;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.tag {
+  background: #FF4D00;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #FF4D00;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Join Houses</h1>
-  <a class="btn" href="https://wa.me/5584898775048" target="_blank">
-    WhatsApp
-  </a>
+  <div class="logo">Join Houses</div>
+  <a class="btn" href="https://wa.me/5584898775048" target="_blank">WhatsApp</a>
 </header>
 
 <div class="container">
-  <h2>Encontre o imóvel ideal</h2>
-  <p>Compra, aluguel ou temporada — tudo em um só lugar.</p>
+  <h2>Imóveis disponíveis</h2>
+
+  <div class="grid">
+
+    <!-- IMÓVEL 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300">
+      <div class="card-content">
+        <div class="tag">Temporada</div>
+        <h3>Flat em Ponta Negra</h3>
+        <div class="price">R$ 250 / diária</div>
+        <a class="btn" href="https://wa.me/5584898775048?text=Tenho interesse no Flat em Ponta Negra">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- IMÓVEL 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300">
+      <div class="card-content">
+        <div class="tag">Aluguel</div>
+        <h3>Apartamento 2 quartos</h3>
+        <div class="price">R$ 1.200 / mês</div>
+        <a class="btn" href="https://wa.me/5584898775048?text=Tenho interesse no apartamento de 2 quartos">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- IMÓVEL 3 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300">
+      <div class="card-content">
+        <div class="tag">Venda</div>
+        <h3>Apartamento Beira Mar</h3>
+        <div class="price">R$ 320.000</div>
+        <a class="btn" href="https://wa.me/5584898775048?text=Tenho interesse no imóvel à venda">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<a class="whatsapp-float" href="https://wa.me/5584898775048" target="_blank">
+  💬
+</a>
 
 </body>
 </html>

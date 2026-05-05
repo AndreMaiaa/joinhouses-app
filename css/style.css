@@ -1,47 +1,63 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
+  margin: 0;
+  font-family: Arial;
   background: #0f0f0f;
   color: #fff;
 }
 
-.header {
-  text-align: center;
-  padding: 30px;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   background: #1a1a1a;
 }
 
-.header h1 {
+.navbar nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
   color: #ff6600;
+  font-weight: bold;
 }
 
-.filtros {
-  text-align: center;
-  margin: 20px;
-}
-
-.filtros button {
-  margin: 5px;
-  padding: 10px 20px;
-  border: none;
+.btn-topo {
   background: #ff6600;
-  color: #fff;
-  cursor: pointer;
+  padding: 10px;
   border-radius: 5px;
+  color: white;
+  text-decoration: none;
 }
 
-.filtros button:hover {
-  background: #e65c00;
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ff6600, #ff3300);
 }
 
+.hero h1 {
+  font-size: 40px;
+}
+
+.btn-principal {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25d366;
+  padding: 12px 25px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -67,29 +83,34 @@ body {
   padding: 15px;
 }
 
-.card h3 {
-  color: #ff6600;
-  margin-bottom: 10px;
-}
-
-.card p {
-  margin-bottom: 5px;
-}
-
 .botao {
   display: block;
-  text-align: center;
   margin-top: 10px;
   padding: 10px;
-  background: #25d366;
-  color: #fff;
-  text-decoration: none;
+  text-align: center;
   border-radius: 5px;
+  text-decoration: none;
 }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: #1a1a1a;
-  margin-top: 30px;
+.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.saiba {
+  background: #ff6600;
+  color: white;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }

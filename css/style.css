@@ -28,6 +28,7 @@ header {
   box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
+/* LOGO */
 .logo {
   justify-self: start;
   color: #FF4D00;
@@ -40,6 +41,7 @@ header {
   display: flex;
   gap: 30px;
 }
+
 .menu a {
   color: #ccc;
   text-decoration: none;
@@ -49,7 +51,7 @@ header {
   position: relative;
 }
 
-/* efeito linha animada */
+/* linha animada */
 .menu a::after {
   content: "";
   position: absolute;
@@ -72,7 +74,7 @@ header {
 /* BOTÃO WHATSAPP */
 .whatsapp-btn {
   background: linear-gradient(45deg, #FF4D00, #ff7a00);
-  padding: 5px 18px;
+  padding: 8px 16px;
   border-radius: 8px;
   color: #fff;
   text-decoration: none;
@@ -84,14 +86,15 @@ header {
 .whatsapp-btn:hover {
   transform: scale(1.05);
 }
-</style>
 
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .menu {
-    display: none; /* 🔥 some no mobile (simples por enquanto) */
+    display: none;
   }
 
   header {
     padding: 15px 20px;
   }
 }
+</style>

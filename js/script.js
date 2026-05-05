@@ -10,9 +10,9 @@ function formatarPreco(valor) {
 function renderizar() {
   container.innerHTML = "";
 
-  imoveis.forEach(imovel => {
+  imoveis.forEach((imovel, index) => {
     container.innerHTML += `
-      <div class="card">
+      <div class="card reveal delay-${(index % 4) + 1}">
         <img src="${imovel.imagem}" alt="${imovel.titulo}">
         
         <div class="card-content">
@@ -30,6 +30,25 @@ function renderizar() {
       </div>
     `;
   });
+
+  ativarAnimacao();
+}
+
+/* ANIMAÇÃO AO ROLAR */
+function ativarAnimacao() {
+  const elementos = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  elementos.forEach(el => observer.observe(el));
 }
 
 renderizar();

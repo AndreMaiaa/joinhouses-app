@@ -13,12 +13,15 @@ body {
 
 /* HEADER */
 header {
-  display: flex;
+    display: flex;
   justify-content: space-between;
+  align-items: center; /* 🔥 ESSA LINHA RESOLVE */
   padding: 20px 40px;
   position: fixed;
   width: 100%;
+  background: rgba(0,0,0,0.7);
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .logo {
@@ -33,6 +36,10 @@ header {
   border-radius: 8px;
   color: #fff;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* HERO */

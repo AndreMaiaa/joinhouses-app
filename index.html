@@ -1,315 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join Houses</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Houses</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Compra, venda e aluguel de imóveis com atendimento profissional.">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #000;
-  color: #fff;
-}
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-/* LOGO */
-.logo {
-  color: #FF4D00;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-/* MENU */
-.menu {
-  display: flex;
-  gap: 30px;
-}
-
-.menu a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 15px;
-  position: relative;
-  transition: 0.3s;
-}
-
-.menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background: #FF4D00;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: #fff;
-}
-
-.menu a:hover::after {
-  width: 100%;
-}
-
-/* BOTÃO */
-.btn {
-  background: linear-gradient(45deg, #FF4D00, #ff7a00);
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), #000),
-              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #aaa;
-  margin-bottom: 25px;
-}
-
-/* SECTION */
-.section {
-  padding: 80px 40px;
-}
-
-.section h2 {
-  margin-bottom: 30px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-/* CARD */
-.card {
-  background: #111;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.tag {
-  background: #FF4D00;
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.price {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-/* BENEFITS */
-.benefits {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.benefit {
-  flex: 1;
-  min-width: 250px;
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  border-top: 1px solid #111;
-  color: #777;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25D366;
-  padding: 14px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
-
-.whatsapp img {
-  width: 28px;
-  height: 28px;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .section {
-    padding: 60px 20px;
-  }
-}
-</style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Join Houses</div>
-
-  <nav class="menu">
-    <a href="#">Início</a>
-    <a href="#">Imóveis</a>
-    <a href="#">Sobre</a>
-    <a href="#">Contato</a>
-  </nav>
-
-  <a class="btn" href="https://wa.me/5584898775048">WhatsApp</a>
+<header class="header">
+  <h1>Join Houses</h1>
+  <p>Encontre seu imóvel ideal</p>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Encontre o imóvel ideal</h1>
-    <p>Compra, aluguel ou temporada com a Join Houses</p>
-    <a class="btn" href="https://wa.me/5584898775048">Falar no WhatsApp</a>
-  </div>
+<section class="filtros">
+  <button onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('venda')">Venda</button>
+  <button onclick="filtrar('aluguel')">Aluguel</button>
 </section>
 
-<section class="section">
-  <h2>Imóveis em destaque</h2>
+<main>
+  <div id="imoveis" class="grid"></div>
+</main>
 
-    <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-      <div class="card-content">
-        <div class="tag">Temporada</div>
-        <h3>Flat em Ponta Negra</h3>
-        <div class="price">R$ 250 / diária</div>
-        <a class="btn" href="#">Falar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4">
-      <div class="card-content">
-        <div class="tag">Aluguel</div>
-        <h3>Apartamento 2 quartos</h3>
-        <div class="price">R$ 1.200 / mês</div>
-        <a class="btn" href="#">Falar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-      <div class="card-content">
-        <div class="tag">Venda</div>
-        <h3>Beira Mar Premium</h3>
-        <div class="price">R$ 320.000</div>
-        <a class="btn" href="#">Falar</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <h2>Por que escolher a Join Houses?</h2>
-
-  <div class="benefits">
-    <div class="benefit">
-      <h3>Atendimento rápido</h3>
-      <p>Contato direto pelo WhatsApp, sem burocracia.</p>
-    </div>
-
-    <div class="benefit">
-      <h3>Imóveis selecionados</h3>
-      <p>Trabalhamos com opções de qualidade.</p>
-    </div>
-
-    <div class="benefit">
-      <h3>Facilidade total</h3>
-      <p>Compra, aluguel ou temporada em um só lugar.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © Join Houses - Todos os direitos reservados
+<footer class="footer">
+  <p>Contato: (84) 98775-5048 | administrativo@joinhouses.com</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5584898775048" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

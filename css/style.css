@@ -12,10 +12,9 @@ body {
 }
 
 /* HEADER */
-/* HEADER PREMIUM */
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 18px 50px;
   position: fixed;
@@ -26,16 +25,21 @@ header {
   background: rgba(0,0,0,0.65);
   backdrop-filter: blur(12px);
   z-index: 1000;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* 🔥 sombra suave */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
 .logo {
+  justify-self: start;
   color: #FF4D00;
   font-weight: 600;
-  font-size: 20px;
 }
 
 /* MENU */
+.menu {
+  justify-self: center;
+  display: flex;
+  gap: 30px;
+}
 .menu a {
   color: #ccc;
   text-decoration: none;
@@ -74,6 +78,7 @@ header {
   text-decoration: none;
   font-size: 14px;
   transition: 0.3s;
+  justify-self: end;
 }
 
 .whatsapp-btn:hover {

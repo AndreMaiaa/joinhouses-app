@@ -4,70 +4,88 @@
 <meta charset="UTF-8">
 <title>Join Houses</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #000;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #111, #000);
   color: #fff;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  border-bottom: 1px solid #111;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
 }
 
 .logo {
   color: #FF4D00;
-  font-size: 22px;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .btn {
-  background: #FF4D00;
+  background: linear-gradient(45deg, #FF4D00, #ff7a00);
   padding: 10px 18px;
+  border-radius: 8px;
   color: #fff;
   text-decoration: none;
-  border-radius: 6px;
 }
 
+/* HERO */
 .hero {
-  padding: 80px 40px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 20px;
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   color: #aaa;
+  margin-bottom: 25px;
 }
 
+/* SECTION */
 .section {
-  padding: 60px 40px;
+  padding: 80px 40px;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 
+/* CARD */
 .card {
-  background: #111;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
   overflow: hidden;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .card img {
@@ -82,9 +100,9 @@ header {
 
 .tag {
   background: #FF4D00;
-  padding: 6px 10px;
+  padding: 6px 12px;
   font-size: 12px;
-  border-radius: 5px;
+  border-radius: 20px;
   display: inline-block;
   margin-bottom: 10px;
 }
@@ -94,22 +112,17 @@ header {
   margin: 10px 0;
 }
 
-.footer {
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid #111;
-  color: #777;
-}
-
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   background: #FF4D00;
   padding: 15px;
   border-radius: 50%;
-  color: white;
   text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 </style>
 </head>
@@ -122,8 +135,11 @@ header {
 </header>
 
 <section class="hero">
-  <h1>Encontre o imóvel ideal</h1>
-  <p>Compra, aluguel ou temporada em um só lugar</p>
+  <div>
+    <h1>Encontre o imóvel ideal</h1>
+    <p>Compra, aluguel ou temporada com a Join Houses</p>
+    <a class="btn" href="https://wa.me/5584898775048">Falar no WhatsApp</a>
+  </div>
 </section>
 
 <section class="section">
@@ -137,7 +153,7 @@ header {
         <div class="tag">Temporada</div>
         <h3>Flat em Ponta Negra</h3>
         <div class="price">R$ 250 / diária</div>
-        <a class="btn" href="https://wa.me/5584898775048">Falar no WhatsApp</a>
+        <a class="btn" href="https://wa.me/5584898775048">Falar</a>
       </div>
     </div>
 
@@ -147,7 +163,7 @@ header {
         <div class="tag">Aluguel</div>
         <h3>Apartamento 2 quartos</h3>
         <div class="price">R$ 1.200 / mês</div>
-        <a class="btn" href="https://wa.me/5584898775048">Falar no WhatsApp</a>
+        <a class="btn" href="https://wa.me/5584898775048">Falar</a>
       </div>
     </div>
 
@@ -157,16 +173,12 @@ header {
         <div class="tag">Venda</div>
         <h3>Beira Mar Premium</h3>
         <div class="price">R$ 320.000</div>
-        <a class="btn" href="https://wa.me/5584898775048">Falar no WhatsApp</a>
+        <a class="btn" href="https://wa.me/5584898775048">Falar</a>
       </div>
     </div>
 
   </div>
 </section>
-
-<div class="footer">
-  © Join Houses - Todos os direitos reservados
-</div>
 
 <a class="whatsapp" href="https://wa.me/5584898775048">💬</a>
 

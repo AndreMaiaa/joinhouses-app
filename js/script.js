@@ -26,11 +26,7 @@ function criarCard(imovel, index) {
       <p><strong>${formatarPreco(imovel.preco)}</strong></p>
 
       <a class="botao saiba" href="#">Saiba mais</a>
-
-      <a class="botao whatsapp" target="_blank"
-      href="https://wa.me/${WHATSAPP}?text=Tenho interesse no imóvel: ${encodeURIComponent(imovel.titulo)}">
-      Falar no WhatsApp
-      </a>
+      
     </div>
   `;
 

@@ -1,20 +1,20 @@
-const venda = document.getElementById("venda");
-const aluguel = document.getElementById("aluguel");
-const temporada = document.getElementById("temporada");
+const grids = document.querySelectorAll('.grid');
+const tabs = document.querySelectorAll('.tab-btn');
 
-function formatar(valor) {
-    return valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL"
+function formatar(valor){
+    return valor.toLocaleString('pt-BR',{
+        style:'currency',
+        currency:'BRL'
     });
 }
 
-function criarCard(imovel) {
-    const div = document.createElement("div");
-    div.className = "card";
+function criarCard(imovel){
+    const div = document.createElement('div');
+
+    div.className = 'card';
 
     div.innerHTML = `
-        <img src="${imovel.imagem}" alt="${imovel.titulo}">
+        <img src="${imovel.imagem}">
         <div class="card-content">
             <h3>${imovel.titulo}</h3>
             <p>${imovel.descricao}</p>
@@ -28,18 +28,24 @@ function criarCard(imovel) {
     return div;
 }
 
-imoveis.forEach(imovel => {
+imoveis.forEach(imovel=>{
     const card = criarCard(imovel);
 
-    if (imovel.tipo === "venda") {
-        venda.appendChild(card);
-    }
-
-    if (imovel.tipo === "aluguel") {
-        aluguel.appendChild(card);
-    }
-
-    if (imovel.tipo === "temporada") {
-        temporada.appendChild(card);
-    }
+    document.getElementById(imovel.tipo).appendChild(card);
 });
+
+function mostrarCategoria(tipo){
+    grids.forEach(grid=>{
+        grid.classList.remove('active');
+    });
+
+    tabs.forEach(tab=>{
+        tab.classList.remove('active');
+    });
+
+    document.getElementById(tipo).classList.add('active');
+
+    event.target.classList.add('active');
+}
+
+document.getElementById('venda').classList.add('active');

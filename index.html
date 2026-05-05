@@ -3,33 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Houses</title>
-
-  <meta name="description" content="Compra, venda e aluguel de imóveis com atendimento profissional.">
+  <title>Join Flats</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header class="header">
-  <h1>Join Houses</h1>
-  <p>Encontre seu imóvel ideal</p>
+<!-- MENU -->
+<header class="navbar">
+  <div class="logo">Join Flats</div>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Imóveis</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <a href="https://wa.me/5584999999999" class="btn-topo">Falar agora</a>
 </header>
 
-<section class="filtros">
-  <button onclick="filtrar('todos')">Todos</button>
-  <button onclick="filtrar('venda')">Venda</button>
-  <button onclick="filtrar('aluguel')">Aluguel</button>
+<!-- HERO -->
+<section class="hero">
+  <h1>Encontre seu imóvel ideal</h1>
+  <p>Compra, venda e aluguel com atendimento profissional</p>
+  <a href="https://wa.me/5584999999999" class="btn-principal">Falar no WhatsApp</a>
 </section>
 
-<main>
+<!-- LISTA -->
+<section class="imoveis-section">
+  <h2>Imóveis disponíveis</h2>
   <div id="imoveis" class="grid"></div>
-</main>
+</section>
 
-<footer class="footer">
-  <p>Contato: (84) 98775-5048 | administrativo@joinhouses.com</p>
-</footer>
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5584999999999" class="whatsapp-fixo">💬</a>
 
 <script src="js/data.js"></script>
 <script src="js/script.js"></script>

@@ -51,4 +51,26 @@ function ativarAnimacao() {
   elementos.forEach(el => observer.observe(el));
 }
 
+/* LOADER */
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+
+/* NAVBAR SCROLL */
+window.addEventListener("scroll", () => {
+  const nav = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+
+/* PARALLAX SUAVE */
+window.addEventListener("scroll", () => {
+  const hero = document.querySelector(".hero");
+  let scroll = window.scrollY;
+  hero.style.backgroundPositionY = scroll * 0.5 + "px";
+});
+
 renderizar();

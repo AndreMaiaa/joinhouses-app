@@ -1,6 +1,3 @@
-const grids = document.querySelectorAll('.grid');
-const tabs = document.querySelectorAll('.tab-btn');
-
 function formatar(valor){
     return valor.toLocaleString('pt-BR', {
         style:'currency',
@@ -10,11 +7,12 @@ function formatar(valor){
 
 function criarCard(imovel){
     const div = document.createElement('div');
-    div.className = 'card';
+    div.className = 'property-card';
 
     div.innerHTML = `
         <img src="${imovel.imagem}" alt="${imovel.titulo}">
-        <div class="card-content">
+
+        <div class="property-info">
             <h3>${imovel.titulo}</h3>
             <p>${imovel.bairro} - ${imovel.cidade}</p>
             <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
@@ -31,15 +29,16 @@ function criarCard(imovel){
 
 imoveis.forEach(imovel => {
     const card = criarCard(imovel);
-    document.getElementById(imovel.tipo).appendChild(card);
+
+    if(imovel.tipo === 'venda'){
+        document.getElementById('venda').appendChild(card);
+    }
+
+    if(imovel.tipo === 'aluguel'){
+        document.getElementById('aluguel').appendChild(card);
+    }
+
+    if(imovel.tipo === 'temporada'){
+        document.getElementById('temporada').appendChild(card);
+    }
 });
-
-function mostrarCategoria(tipo){
-    grids.forEach(grid => grid.classList.remove('active'));
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    document.getElementById(tipo).classList.add('active');
-    event.target.classList.add('active');
-}
-
-document.getElementById('venda').classList.add('active');

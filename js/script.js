@@ -28,3 +28,11 @@ imoveis.forEach(imovel => {
     </div>
   `;
 });
+.menu a {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+.menu a:hover {
+  color: #fff !important;
+}

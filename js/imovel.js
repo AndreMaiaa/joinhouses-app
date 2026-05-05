@@ -1,5 +1,5 @@
 function formatar(valor){
-    return valor.toLocaleString('pt-BR', {
+    return valor.toLocaleString('pt-BR',{
         style:'currency',
         currency:'BRL'
     });
@@ -8,9 +8,11 @@ function formatar(valor){
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get('id'));
 
-const imovel = imoveis.find(item => item.id === id);
+const imovel = imoveis.find(i => i.id === id);
 
 if(imovel){
+    document.title = `${imovel.titulo} | Join Houses`;
+
     document.getElementById('titulo').textContent = imovel.titulo;
     document.getElementById('preco').textContent = formatar(imovel.preco);
     document.getElementById('bairro').textContent = imovel.bairro;
@@ -21,4 +23,7 @@ if(imovel){
     document.getElementById('area').textContent = imovel.area;
     document.getElementById('descricao').textContent = imovel.descricao;
     document.getElementById('imagem').src = imovel.imagem;
+    document.getElementById('tipoBadge').textContent = imovel.tipo;
+} else {
+    window.location.href = "index.html";
 }

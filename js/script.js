@@ -2,7 +2,7 @@ const grids = document.querySelectorAll('.grid');
 const tabs = document.querySelectorAll('.tab-btn');
 
 function formatar(valor){
-    return valor.toLocaleString('pt-BR',{
+    return valor.toLocaleString('pt-BR', {
         style:'currency',
         currency:'BRL'
     });
@@ -10,17 +10,18 @@ function formatar(valor){
 
 function criarCard(imovel){
     const div = document.createElement('div');
-
     div.className = 'card';
 
     div.innerHTML = `
-        <img src="${imovel.imagem}">
+        <img src="${imovel.imagem}" alt="${imovel.titulo}">
         <div class="card-content">
             <h3>${imovel.titulo}</h3>
-            <p>${imovel.descricao}</p>
+            <p>${imovel.bairro} - ${imovel.cidade}</p>
+            <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
             <strong>${formatar(imovel.preco)}</strong>
-            <a href="https://wa.me/5584987755048" class="botao">
-                Falar no WhatsApp
+
+            <a href="imovel.html?id=${imovel.id}" class="botao">
+                Ver detalhes
             </a>
         </div>
     `;
@@ -28,23 +29,16 @@ function criarCard(imovel){
     return div;
 }
 
-imoveis.forEach(imovel=>{
+imoveis.forEach(imovel => {
     const card = criarCard(imovel);
-
     document.getElementById(imovel.tipo).appendChild(card);
 });
 
 function mostrarCategoria(tipo){
-    grids.forEach(grid=>{
-        grid.classList.remove('active');
-    });
-
-    tabs.forEach(tab=>{
-        tab.classList.remove('active');
-    });
+    grids.forEach(grid => grid.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active'));
 
     document.getElementById(tipo).classList.add('active');
-
     event.target.classList.add('active');
 }
 

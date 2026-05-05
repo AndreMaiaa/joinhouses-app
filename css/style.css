@@ -13,7 +13,7 @@ body {
 
 /* HEADER */
 header {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center; /* 🔥 ESSA LINHA RESOLVE */
   padding: 20px 40px;
@@ -127,8 +127,8 @@ header {
 }
 
 .whatsapp img {
-  width: 26px;
-  height: 26px;
+  width: 6px;
+  height: 6px;
 }
 
 .whatsapp:hover {

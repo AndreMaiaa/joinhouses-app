@@ -1,173 +1,170 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 
-body{
-    background:#000;
-    color:white;
-}
+body{background:#000;color:#fff;padding-top:80px}
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+.container{width:90%;max-width:1200px;margin:auto}
 
+/* HEADER */
 .navbar{
-    position:fixed;
-    width:100%;
-    background:#000;
-    padding:15px 0;
-    z-index:1000;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  z-index:1000;
 }
 
 .nav-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
 }
 
-.logo{
-    color:#FF4D00;
-    font-size:24px;
-    font-weight:bold;
-}
+.logo{color:#FF4D00;font-weight:bold}
 
-nav{
-    display:flex;
-    gap:20px;
-}
+nav{display:flex;gap:20px}
 
 nav a{
-    color:white;
-    text-decoration:none;
+  color:#ccc;
+  text-decoration:none;
+  transition:.3s;
 }
 
+nav a:hover{color:#FF4D00}
+
+/* BOTÃO CRM */
+.btn-crm{
+  background:#FF4D00;
+  padding:10px 15px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#fff;
+  transition:.3s;
+}
+
+.btn-crm:hover{transform:scale(1.05)}
+
+/* HERO */
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-    url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85') center/cover;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(#000a,#000),
+  url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85') center/cover;
 }
 
-.hero-content{
-    max-width:700px;
+.hero h1{font-size:42px;margin-bottom:20px}
+
+.btn-primary{
+  background:#FF4D00;
+  padding:12px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#fff;
+  margin:5px;
+  display:inline-block;
 }
 
-.hero h1{
-    font-size:50px;
-    margin-bottom:20px;
+/* GRID IMÓVEIS */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-.btn-primary,
-.botao{
-    background:#FF4D00;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:8px;
-    display:inline-block;
-}
+.cards{display:flex;flex-direction:column;gap:20px}
 
-.stats,
-.about-section,
-.proprietario-section,
-.footer,
-.imoveis-section{
-    padding:80px 0;
-}
-
-.stats-grid,
-.about-grid,
-.footer-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.slider-container{
-    overflow-x:auto;
-    margin-bottom:50px;
-}
-
-.slider-track{
-    display:flex;
-    gap:20px;
-}
-
+/* CARD */
 .property-card{
-    width:280px;
-    background:#111;
-    border-radius:12px;
-    overflow:hidden;
+  background:#111;
+  border-radius:12px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.property-card:hover{
+  transform:translateY(-5px);
 }
 
 .property-card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
 
-.property-info{
-    padding:20px;
-}
+.property-info{padding:15px}
 
 .badge{
-    background:#FF4D00;
-    padding:5px 10px;
-    border-radius:20px;
-    display:inline-block;
-    margin-bottom:10px;
+  background:#FF4D00;
+  padding:5px 10px;
+  border-radius:20px;
+  display:inline-block;
+  margin-bottom:10px;
 }
 
-.imovel-detalhe{
-    padding:120px 0;
+/* ABOUT */
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.detalhe-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:40px;
+.box{
+  background:#111;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
 }
 
-.imagem-detalhe{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-    border-radius:12px;
+/* CTA */
+.cta{
+  text-align:center;
+  padding:80px 20px;
 }
 
-.info-box,
-.descricao-box,
-.about-grid div{
-    background:#111;
-    padding:30px;
-    border-radius:12px;
+/* FOOTER */
+.footer{
+  background:#111;
+  padding:40px 0;
 }
 
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* ANIMAÇÃO */
+.fade-in{
+  animation:fade 1s ease-in;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1}
+}
+
+/* RESPONSIVO */
 @media(max-width:768px){
-    nav{
-        display:none;
-    }
+  .grid-3,.about-grid,.footer-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero h1{
-        font-size:32px;
-    }
-
-    .stats-grid,
-    .about-grid,
-    .footer-grid,
-    .detalhe-grid{
-        grid-template-columns:1fr;
-    }
-
-    .imagem-detalhe{
-        height:300px;
-    }
+  nav{display:none}
 }

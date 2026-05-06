@@ -1,227 +1,35 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-
-body{background:#000;color:#fff;padding-top:80px}
-
-.container{width:90%;max-width:1200px;margin:auto}
-
-/* HEADER */
-.navbar{
-  position:fixed;
-  width:100%;
-  top:0;
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,0.05);
-  z-index:1000;
+function formatar(valor){
+    return valor.toLocaleString('pt-BR',{
+        style:'currency',
+        currency:'BRL'
+    });
 }
 
-.nav-content{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
+function criarCard(imovel){
+    return `
+        <div class="property-card">
+            <img loading="lazy" src="${imovel.imagem}" alt="${imovel.titulo}">
+
+            <div class="property-info">
+                <span class="badge">${imovel.tipo.charAt(0).toUpperCase() + imovel.tipo.slice(1)}</span>
+
+                <h3>${imovel.titulo}</h3>
+                <p>${imovel.bairro} - ${imovel.cidade}</p>
+                <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
+                <strong>${formatar(imovel.preco)}</strong>
+
+                <a href="imovel.html?id=${imovel.id}" class="botao">
+                    Ver detalhes
+                </a>
+            </div>
+        </div>
+    `;
 }
 
-.logo{color:#FF4D00;font-weight:bold}
+imoveis.forEach(imovel => {
+    const container = document.getElementById(imovel.tipo);
 
-nav{display:flex;gap:20px}
-
-nav a{
-  color:#ccc;
-  text-decoration:none;
-  transition:.3s;
-}
-
-nav a:hover{color:#FF4D00}
-
-/* BOTÃO CRM */
-.btn-crm{
-  background:#FF4D00;
-  padding:10px 15px;
-  border-radius:8px;
-  text-decoration:none;
-  color:#fff;
-  transition:.3s;
-}
-
-.btn-crm:hover{transform:scale(1.05)}
-
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(#000a,#000),
-  url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85') center/cover;
-}
-
-.hero h1{font-size:42px;margin-bottom:20px}
-
-.btn-primary{
-  background:#FF4D00;
-  padding:12px 25px;
-  border-radius:8px;
-  text-decoration:none;
-  color:#fff;
-  margin:5px;
-  display:inline-block;
-}
-
-/* GRID IMÓVEIS */
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-
-/* CORREÇÃO DOS TÍTULOS (Venda/Aluguel/Temporada) */
-.grid-3 > div h3{
-  margin-bottom:10px;
-  padding-left:10px;
-  border-left:3px solid #FF4D00;
-}
-
-/* CARDS */
-.cards{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-/* CARD */
-.property-card{
-  background:#111;
-  border-radius:12px;
-  overflow:hidden;
-  transition:.3s;
-}
-
-.property-card:hover{
-  transform:translateY(-5px);
-}
-
-.property-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-.property-info{padding:15px}
-
-.property-info h3{margin:10px 0}
-
-.badge{
-  background:#FF4D00;
-  padding:5px 10px;
-  border-radius:20px;
-  display:inline-block;
-  margin-bottom:10px;
-}
-
-/* BOTÃO (CORREÇÃO PRINCIPAL) */
-.botao{
-  display:inline-block;
-  margin-top:10px;
-  background:#FF4D00;
-  color:#fff;
-  padding:8px 14px;
-  border-radius:6px;
-  text-decoration:none;
-  font-size:14px;
-  transition:.3s;
-}
-
-.botao:hover{
-  background:#ff6a2f;
-}
-
-/* ABOUT */
-.about{
-  margin-top:50px;
-  text-align:center;
-}
-
-.about h2{
-  margin-bottom:25px;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.box{
-  background:#111;
-  padding:25px;
-  border-radius:12px;
-  text-align:center;
-  transition:.3s;
-}
-
-.box:hover{
-  transform:translateY(-5px);
-}
-
-/* CTA */
-.cta{
-  text-align:center;
-  padding:80px 20px;
-  animation:fade 1s ease-in;
-}
-
-.cta p{
-  margin:10px 0 20px;
-  color:#ccc;
-}
-
-/* FOOTER */
-.footer{
-  background:#0d0d0d;
-  padding:50px 0;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.footer p{
-  color:#aaa;
-}
-
-/* WHATSAPP */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:12px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-}
-
-/* ANIMAÇÃO */
-.fade-in{
-  animation:fade 1s ease-in;
-}
-
-@keyframes fade{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1}
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-  .grid-3,.about-grid,.footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  nav{display:none}
-}
+    if(container){
+        container.insertAdjacentHTML('beforeend', criarCard(imovel));
+    }
+});

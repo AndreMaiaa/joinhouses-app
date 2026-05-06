@@ -34,17 +34,13 @@ nav a{
 
 nav a:hover{color:#FF4D00}
 
-/* BOTÃO CRM */
 .btn-crm{
   background:#FF4D00;
   padding:10px 15px;
   border-radius:8px;
   text-decoration:none;
   color:#fff;
-  transition:.3s;
 }
-
-.btn-crm:hover{transform:scale(1.05)}
 
 /* HERO */
 .hero{
@@ -66,14 +62,46 @@ nav a:hover{color:#FF4D00}
   text-decoration:none;
   color:#fff;
   margin:5px;
-  display:inline-block;
 }
 
-/* GRID IMÓVEIS */
+/* STATS */
+.stats{
+  margin-top:-60px;
+  margin-bottom:40px;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  background:#111;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+}
+
+/* IMÓVEIS */
+.titulo-secao{
+  text-align:center;
+  margin-bottom:30px;
+}
+
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:30px;
+}
+
+.coluna{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.categoria{
+  font-size:20px;
+  border-left:4px solid #FF4D00;
+  padding-left:10px;
 }
 
 .cards{display:flex;flex-direction:column;gap:20px}
@@ -84,6 +112,7 @@ nav a:hover{color:#FF4D00}
   border-radius:12px;
   overflow:hidden;
   transition:.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 .property-card:hover{
@@ -98,6 +127,8 @@ nav a:hover{color:#FF4D00}
 
 .property-info{padding:15px}
 
+.property-info h3{margin:10px 0}
+
 .badge{
   background:#FF4D00;
   padding:5px 10px;
@@ -106,85 +137,7 @@ nav a:hover{color:#FF4D00}
   margin-bottom:10px;
 }
 
-/* ABOUT */
-.about-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.box{
-  background:#111;
-  padding:25px;
-  border-radius:12px;
-  text-align:center;
-}
-
-/* CTA */
-.cta{
-  text-align:center;
-  padding:80px 20px;
-}
-
-/* FOOTER */
-.footer{
-  background:#111;
-  padding:40px 0;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-/* WHATSAPP */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50%;
-  color:#fff;
-  text-decoration:none;
-}
-
-/* ANIMAÇÃO */
-.fade-in{
-  animation:fade 1s ease-in;
-}
-
-@keyframes fade{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1}
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-  .grid-3,.about-grid,.footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  nav{display:none}
-}
-.titulo-secao{
-  margin-bottom:30px;
-  text-align:center;
-}
-
-.coluna{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-.categoria{
-  color:#fff;
-  font-size:20px;
-  border-left:4px solid #FF4D00;
-  padding-left:10px;
-}
+/* BOTÃO */
 .botao{
   display:inline-block;
   margin-top:12px;
@@ -200,4 +153,75 @@ nav a:hover{color:#FF4D00}
 .botao:hover{
   background:#ff6a2f;
   transform:translateY(-2px);
+}
+
+/* ABOUT */
+.about{
+  text-align:center;
+  margin-top:60px;
+}
+
+.about h2{margin-bottom:30px}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.box{
+  background:#111;
+  padding:30px;
+  border-radius:12px;
+  transition:.3s;
+}
+
+.box:hover{transform:translateY(-5px)}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.cta p{
+  color:#ccc;
+  margin:15px 0;
+}
+
+/* FOOTER */
+.footer{
+  background:#0d0d0d;
+  padding:60px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.footer p{color:#aaa}
+
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:12px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  .grid-3,.about-grid,.footer-grid,.stats-grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{display:none}
 }

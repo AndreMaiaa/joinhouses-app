@@ -5,6 +5,12 @@ function formatar(valor){
     });
 }
 
+function formatarTipo(tipo){
+  if(tipo === "venda") return "Venda";
+  if(tipo === "aluguel") return "Aluguel";
+  if(tipo === "temporada") return "Temporada";
+}
+
 function criarCard(imovel){
     return `
         <div class="property-card">
@@ -13,12 +19,6 @@ function criarCard(imovel){
             <div class="property-info">
                 <span class="badge">${formatarTipo(imovel.tipo)}</span>
 
-                function formatarTipo(tipo){
-                  if(tipo === "venda") return "Venda";
-                  if(tipo === "aluguel") return "Aluguel";
-                  if(tipo === "temporada") return "Temporada";
-                }
-
                 <h3>${imovel.titulo}</h3>
                 <p>${imovel.bairro} - ${imovel.cidade}</p>
                 <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
@@ -26,7 +26,6 @@ function criarCard(imovel){
 
                 <a href="imovel.html?id=${imovel.id}" class="botao">
                     Ver detalhes
-                
                 </a>
             </div>
         </div>
@@ -37,10 +36,6 @@ imoveis.forEach(imovel => {
     const container = document.getElementById(imovel.tipo);
 
     if(container){
-        container.innerHTML += criarCard(imovel);
+        container.insertAdjacentHTML('beforeend', criarCard(imovel));
     }
-});
-
-document.querySelectorAll(".property-card").forEach(card=>{
-  card.classList.add("fade-in");
 });

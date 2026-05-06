@@ -1,145 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Houses | Venda, Aluguel e Temporada em Natal</title>
-    <meta name="description" content="Venda, aluguel tradicional e locação por temporada em Natal/RN.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Houses</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="navbar">
-    <div class="container nav-content">
-        <div class="logo">Join Houses</div>
+  <div class="container nav-content">
+    <div class="logo">Join Houses</div>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#imoveis">Imóveis</a>
-            <a href="#proprietario">Anunciar</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#imoveis">Imóveis</a>
+      <a href="#proprietario">Anunciar</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-        <a href="/crm" class="btn-crm">Área do Corretor</a>
-    </div>
+    <a href="/crm" class="btn-crm">Área do Corretor</a>
+  </div>
 </header>
 
-<section class="hero" id="inicio">
-    <div class="hero-content">
-        <h1>Venda, alugue ou monetize seu imóvel em Natal</h1>
-        <p>
-            Especialistas em venda, aluguel tradicional e locação por temporada.
-        </p>
+<section class="hero">
+  <div class="hero-content fade-in">
+    <h1>Venda mais rápido ou aumente sua renda com imóveis</h1>
+    <p>Especialistas em venda, aluguel e temporada em Natal</p>
 
-        <div class="hero-buttons">
-            <a href="#imoveis" class="btn-primary">Ver Imóveis</a>
-            <a href="https://wa.me/5584987755048" class="btn-primary">
-                Falar no WhatsApp
-            </a>
-        </div>
+    <div class="hero-buttons">
+      <a href="#imoveis" class="btn-primary">Ver imóveis</a>
+      <a href="https://wa.me/5584987755048" class="btn-primary">WhatsApp</a>
     </div>
+  </div>
 </section>
 
-<section class="stats">
-    <div class="container stats-grid">
-        <div>
-            <h2>+120</h2>
-            <p>Imóveis administrados</p>
-        </div>
+<section id="imoveis" class="imoveis-section container">
+  <h2>Imóveis</h2>
 
-        <div>
-            <h2>+300</h2>
-            <p>Clientes atendidos</p>
-        </div>
-
-        <div>
-            <h2>+50</h2>
-            <p>Imóveis vendidos</p>
-        </div>
+  <div class="grid-3">
+    <div>
+      <h3>Venda</h3>
+      <div id="venda" class="cards"></div>
     </div>
+
+    <div>
+      <h3>Aluguel</h3>
+      <div id="aluguel" class="cards"></div>
+    </div>
+
+    <div>
+      <h3>Temporada</h3>
+      <div id="temporada" class="cards"></div>
+    </div>
+  </div>
 </section>
 
-<section class="imoveis-section" id="imoveis">
-    <div class="container">
+<section class="about container">
+  <h2>Mais que uma imobiliária</h2>
 
-        <h2>Imóveis à Venda</h2>
-        <div class="slider-container">
-            <div id="venda" class="slider-track"></div>
-        </div>
-
-        <h2>Imóveis para Aluguel</h2>
-        <div class="slider-container">
-            <div id="aluguel" class="slider-track"></div>
-        </div>
-
-        <h2>Locação por Temporada</h2>
-        <div class="slider-container">
-            <div id="temporada" class="slider-track"></div>
-        </div>
-
+  <div class="about-grid">
+    <div class="box">
+      <h3>Venda estratégica</h3>
+      <p>Vendemos mais rápido e com melhor valor</p>
     </div>
+
+    <div class="box">
+      <h3>Locação segura</h3>
+      <p>Gestão profissional e sem dor de cabeça</p>
+    </div>
+
+    <div class="box">
+      <h3>Alta rentabilidade</h3>
+      <p>Temporada com maior retorno</p>
+    </div>
+  </div>
 </section>
 
-<section class="about-section">
-    <div class="container">
-        <h2>Mais que uma imobiliária</h2>
-
-        <p class="about-text">
-            Unimos tecnologia, atendimento humano e estratégia comercial.
-        </p>
-
-        <div class="about-grid">
-            <div>
-                <h3>Venda estratégica</h3>
-                <p>Vendemos mais rápido e melhor.</p>
-            </div>
-
-            <div>
-                <h3>Locação segura</h3>
-                <p>Gestão profissional.</p>
-            </div>
-
-            <div>
-                <h3>Alta rentabilidade</h3>
-                <p>Temporada com maior retorno.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="proprietario-section" id="proprietario">
-    <div class="container">
-        <h2>Anuncie seu imóvel</h2>
-        <p>Fale com nossa equipe.</p>
-
-        <a href="https://wa.me/5584987755048" class="btn-primary">
-            WhatsApp
-        </a>
-    </div>
+<section id="proprietario" class="cta">
+  <h2>Transforme seu imóvel em renda</h2>
+  <p>Cuidamos de tudo para você lucrar mais</p>
+  <a href="https://wa.me/5584987755048" class="btn-primary">Falar no WhatsApp</a>
 </section>
 
 <footer class="footer" id="contato">
-    <div class="container footer-grid">
-        <div>
-            <h3>Join Houses</h3>
-            <p>Natal/RN</p>
-        </div>
-
-        <div>
-            <h3>Contato</h3>
-            <p>(84) 98775-5048</p>
-            <p>administrativo@joinhouses.com.br</p>
-        </div>
-
-        <div>
-            <h3>Serviços</h3>
-            <p>Venda</p>
-            <p>Aluguel</p>
-            <p>Temporada</p>
-        </div>
+  <div class="container footer-grid">
+    <div>
+      <h3>Join Houses</h3>
+      <p>Natal/RN</p>
     </div>
+
+    <div>
+      <h3>Contato</h3>
+      <p>(84) 98775-5048</p>
+      <p>administrativo@joinhouses.com.br</p>
+    </div>
+
+    <div>
+      <h3>Serviços</h3>
+      <p>Venda</p>
+      <p>Aluguel</p>
+      <p>Temporada</p>
+    </div>
+  </div>
 </footer>
+
+<a href="https://wa.me/5584987755048" class="whatsapp-float">💬</a>
 
 <script src="js/data.js"></script>
 <script src="js/script.js"></script>

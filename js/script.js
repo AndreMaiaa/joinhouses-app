@@ -9,7 +9,7 @@ function formatar(valor){
 // Retorna /mês ou /dia
 function formatarPeriodo(imovel){
     if(!imovel.periodo) return "";
-    return imovel.periodo === "mensal" ? "/mês" : "/dia";
+    return imovel.periodo === "mensal" ? "/mês" : "/diária";
 }
 
 // Cria o card do imóvel

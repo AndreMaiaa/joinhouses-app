@@ -11,7 +11,7 @@ function criarCard(imovel){
             <img loading="lazy" src="${imovel.imagem}" alt="${imovel.titulo}">
 
             <div class="property-info">
-                <span class="badge">${imovel.tipo}</span>
+                <span class="badge">${formatarTipo(imovel.tipo)}</span>
 
                 <h3>${imovel.titulo}</h3>
                 <p>${imovel.bairro} - ${imovel.cidade}</p>
@@ -20,6 +20,11 @@ function criarCard(imovel){
 
                 <a href="imovel.html?id=${imovel.id}" class="botao">
                     Ver detalhes
+                function formatarTipo(tipo){
+                  if(tipo === "venda") return "Venda";
+                  if(tipo === "aluguel") return "Aluguel";
+                  if(tipo === "temporada") return "Temporada";
+                }
                 </a>
             </div>
         </div>

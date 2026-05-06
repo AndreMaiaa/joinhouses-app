@@ -34,13 +34,17 @@ nav a{
 
 nav a:hover{color:#FF4D00}
 
+/* BOTÃO CRM */
 .btn-crm{
   background:#FF4D00;
   padding:10px 15px;
   border-radius:8px;
   text-decoration:none;
   color:#fff;
+  transition:.3s;
 }
+
+.btn-crm:hover{transform:scale(1.05)}
 
 /* HERO */
 .hero{
@@ -62,49 +66,29 @@ nav a:hover{color:#FF4D00}
   text-decoration:none;
   color:#fff;
   margin:5px;
+  display:inline-block;
 }
 
-/* STATS */
-.stats{
-  margin-top:-60px;
-  margin-bottom:40px;
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  background:#111;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
-}
-
-/* IMÓVEIS */
-.titulo-secao{
-  text-align:center;
-  margin-bottom:30px;
-}
-
+/* GRID IMÓVEIS */
 .grid-3{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:30px;
 }
 
-.coluna{
+/* CORREÇÃO DOS TÍTULOS (Venda/Aluguel/Temporada) */
+.grid-3 > div h3{
+  margin-bottom:10px;
+  padding-left:10px;
+  border-left:3px solid #FF4D00;
+}
+
+/* CARDS */
+.cards{
   display:flex;
   flex-direction:column;
   gap:15px;
 }
-
-.categoria{
-  font-size:20px;
-  border-left:4px solid #FF4D00;
-  padding-left:10px;
-}
-
-.cards{display:flex;flex-direction:column;gap:20px}
 
 /* CARD */
 .property-card{
@@ -112,7 +96,6 @@ nav a:hover{color:#FF4D00}
   border-radius:12px;
   overflow:hidden;
   transition:.3s;
-  box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 .property-card:hover{
@@ -137,14 +120,14 @@ nav a:hover{color:#FF4D00}
   margin-bottom:10px;
 }
 
-/* BOTÃO */
+/* BOTÃO (CORREÇÃO PRINCIPAL) */
 .botao{
   display:inline-block;
-  margin-top:12px;
+  margin-top:10px;
   background:#FF4D00;
   color:#fff;
-  padding:10px 15px;
-  border-radius:8px;
+  padding:8px 14px;
+  border-radius:6px;
   text-decoration:none;
   font-size:14px;
   transition:.3s;
@@ -152,16 +135,17 @@ nav a:hover{color:#FF4D00}
 
 .botao:hover{
   background:#ff6a2f;
-  transform:translateY(-2px);
 }
 
 /* ABOUT */
 .about{
+  margin-top:50px;
   text-align:center;
-  margin-top:60px;
 }
 
-.about h2{margin-bottom:30px}
+.about h2{
+  margin-bottom:25px;
+}
 
 .about-grid{
   display:grid;
@@ -171,29 +155,32 @@ nav a:hover{color:#FF4D00}
 
 .box{
   background:#111;
-  padding:30px;
+  padding:25px;
   border-radius:12px;
+  text-align:center;
   transition:.3s;
 }
 
-.box:hover{transform:translateY(-5px)}
+.box:hover{
+  transform:translateY(-5px);
+}
 
 /* CTA */
 .cta{
   text-align:center;
-  padding:100px 20px;
+  padding:80px 20px;
+  animation:fade 1s ease-in;
 }
 
 .cta p{
+  margin:10px 0 20px;
   color:#ccc;
-  margin:15px 0;
 }
 
 /* FOOTER */
 .footer{
   background:#0d0d0d;
-  padding:60px 0;
-  border-top:1px solid rgba(255,255,255,0.05);
+  padding:50px 0;
 }
 
 .footer-grid{
@@ -202,7 +189,9 @@ nav a:hover{color:#FF4D00}
   gap:20px;
 }
 
-.footer p{color:#aaa}
+.footer p{
+  color:#aaa;
+}
 
 /* WHATSAPP */
 .whatsapp-float{
@@ -215,11 +204,22 @@ nav a:hover{color:#FF4D00}
   display:flex;
   align-items:center;
   justify-content:center;
+  text-decoration:none;
+}
+
+/* ANIMAÇÃO */
+.fade-in{
+  animation:fade 1s ease-in;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1}
 }
 
 /* RESPONSIVO */
 @media(max-width:768px){
-  .grid-3,.about-grid,.footer-grid,.stats-grid{
+  .grid-3,.about-grid,.footer-grid{
     grid-template-columns:1fr;
   }
 

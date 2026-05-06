@@ -33,3 +33,7 @@ imoveis.forEach(imovel => {
         container.innerHTML += criarCard(imovel);
     }
 });
+
+document.querySelectorAll(".property-card").forEach(card=>{
+  card.classList.add("fade-in");
+});

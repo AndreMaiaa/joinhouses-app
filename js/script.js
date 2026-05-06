@@ -13,6 +13,12 @@ function criarCard(imovel){
             <div class="property-info">
                 <span class="badge">${formatarTipo(imovel.tipo)}</span>
 
+                function formatarTipo(tipo){
+                  if(tipo === "venda") return "Venda";
+                  if(tipo === "aluguel") return "Aluguel";
+                  if(tipo === "temporada") return "Temporada";
+                }
+
                 <h3>${imovel.titulo}</h3>
                 <p>${imovel.bairro} - ${imovel.cidade}</p>
                 <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
@@ -20,11 +26,7 @@ function criarCard(imovel){
 
                 <a href="imovel.html?id=${imovel.id}" class="botao">
                     Ver detalhes
-                function formatarTipo(tipo){
-                  if(tipo === "venda") return "Venda";
-                  if(tipo === "aluguel") return "Aluguel";
-                  if(tipo === "temporada") return "Temporada";
-                }
+                
                 </a>
             </div>
         </div>

@@ -1,46 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Houses</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-content">
+    <div class="logo">Join Houses</div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#imoveis">Imóveis</a>
+      <a href="#proprietario">Anunciar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a href="/crm" class="btn-crm">Área do Corretor</a>
+  </div>
+</header>
+
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-content fade-in">
     <h1>Venda mais rápido ou aumente sua renda com imóveis</h1>
     <p>Especialistas em venda, aluguel e temporada em Natal</p>
 
-    <div>
+    <div class="hero-buttons">
       <a href="#imoveis" class="btn-primary">Ver imóveis</a>
       <a href="https://wa.me/5584987755048" class="btn-primary">WhatsApp</a>
     </div>
   </div>
 </section>
 
-<section class="stats container">
-  <div class="stats-grid">
-    <div><h3>+300</h3><p>Imóveis vendidos</p></div>
-    <div><h3>+120</h3><p>Imóveis alugados</p></div>
-    <div><h3>+5 anos</h3><p>de mercado</p></div>
-  </div>
-</section>
-
-<section id="imoveis" class="container">
-  <h2 class="titulo-secao">Imóveis</h2>
+<section id="imoveis" class="imoveis-section container">
+  <h2>Imóveis</h2>
 
   <div class="grid-3">
-
-    <div class="coluna">
-      <h3 class="categoria">Venda</h3>
+    <div>
+      <h3>Venda</h3>
       <div id="venda" class="cards"></div>
     </div>
 
-    <div class="coluna">
-      <h3 class="categoria">Aluguel</h3>
+    <div>
+      <h3>Aluguel</h3>
       <div id="aluguel" class="cards"></div>
     </div>
 
-    <div class="coluna">
-      <h3 class="categoria">Temporada</h3>
+    <div>
+      <h3>Temporada</h3>
       <div id="temporada" class="cards"></div>
     </div>
-
   </div>
 </section>
+
+<section class="about container">
+  <h2>Mais que uma imobiliária</h2>
+
+  <div class="about-grid">
+    <div class="box">
+      <h3>Venda estratégica</h3>
+      <p>Vendemos mais rápido e com melhor valor</p>
+    </div>
+
+    <div class="box">
+      <h3>Locação segura</h3>
+      <p>Gestão profissional e sem dor de cabeça</p>
+    </div>
+
+    <div class="box">
+      <h3>Alta rentabilidade</h3>
+      <p>Temporada com maior retorno</p>
+    </div>
+  </div>
+</section>
+
+<section id="proprietario" class="cta">
+  <h2>Transforme seu imóvel em renda</h2>
+  <p>Cuidamos de tudo para você lucrar mais</p>
+  <a href="https://wa.me/5584987755048" class="btn-primary">Falar no WhatsApp</a>
+</section>
+
+<footer class="footer" id="contato">
+  <div class="container footer-grid">
+    <div>
+      <h3>Join Houses</h3>
+      <p>Natal/RN</p>
+    </div>
+
+    <div>
+      <h3>Contato</h3>
+      <p>(84) 98775-5048</p>
+      <p>administrativo@joinhouses.com.br</p>
+    </div>
+
+    <div>
+      <h3>Serviços</h3>
+      <p>Venda</p>
+      <p>Aluguel</p>
+      <p>Temporada</p>
+    </div>
+  </div>
+</footer>
 
 <a href="https://wa.me/5584987755048" class="whatsapp-float">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="28">
 </a>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

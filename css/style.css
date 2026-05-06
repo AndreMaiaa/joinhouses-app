@@ -322,3 +322,23 @@ nav a:hover{color:#FF4D00}
   margin-top:5px;
   font-size:18px;
 }
+
+/* Pagina Sobre nós Texto */
+.sobre-texto{
+  max-width:750px;
+  margin:0 auto;
+  text-align:center;
+  line-height:1.7;
+  color:#aaa;
+}
+
+.sobre-texto p{
+  margin-bottom:15px;
+}
+
+.sobre-texto .destaque{
+  margin-top:20px;
+  font-weight:bold;
+  color:#fff;
+  font-size:18px;
+}

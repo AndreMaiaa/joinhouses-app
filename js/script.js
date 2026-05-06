@@ -13,13 +13,16 @@ function criarCard(imovel){
             <div class="property-info">
                 <span class="badge">${imovel.tipo.charAt(0).toUpperCase() + imovel.tipo.slice(1)}</span>
 
-                <h3>${imovel.titulo}</h3>
+                <h3>$<strong>
+                  ${formatar(imovel.preco)}
+                  ${imovel.periodo === "mensal" ? "/mês" : ""}
+                  ${imovel.periodo === "diaria" ? "/dia" : ""}
+                </strong>{imovel.titulo}</h3>
                 <p>${imovel.bairro} - ${imovel.cidade}</p>
                 <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
                 <strong>
                   ${formatar(imovel.preco)}
-                  ${imovel.periodo === "mensal" ? "/mês" : ""}
-                  ${imovel.periodo === "diaria" ? "/dia" : ""}
+                  ${imovel.periodo ? (imovel.periodo === "mensal" ? "/mês" : "/dia") : ""}
                 </strong>
 
                 <a href="imovel.html?id=${imovel.id}" class="botao">

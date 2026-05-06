@@ -168,3 +168,20 @@ nav a:hover{color:#FF4D00}
 
   nav{display:none}
 }
+.titulo-secao{
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.coluna{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.categoria{
+  color:#fff;
+  font-size:20px;
+  border-left:4px solid #FF4D00;
+  padding-left:10px;
+}

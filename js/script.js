@@ -6,7 +6,7 @@ function formatar(valor){
     });
 }
 
-// Retorna /mês ou /dia
+// Retorna /mês ou /diária
 function formatarPeriodo(imovel){
     if(!imovel.periodo) return "";
     return imovel.periodo === "mensal" ? "/mês" : "/diária";
@@ -40,11 +40,20 @@ function criarCard(imovel){
     `;
 }
 
-// Insere os imóveis nas colunas corretas
+// 🔥 FUNCIONA PARA INDEX E IMOVEIS.HTML
 imoveis.forEach(imovel => {
-    const container = document.getElementById(imovel.tipo);
 
+    // Página de listagem geral
+    const lista = document.getElementById("lista-imoveis");
+    if(lista){
+        lista.insertAdjacentHTML('beforeend', criarCard(imovel));
+        return;
+    }
+
+    // Página index (separado por tipo)
+    const container = document.getElementById(imovel.tipo);
     if(container){
         container.insertAdjacentHTML('beforeend', criarCard(imovel));
     }
+
 });

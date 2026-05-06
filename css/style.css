@@ -185,3 +185,19 @@ nav a:hover{color:#FF4D00}
   border-left:4px solid #FF4D00;
   padding-left:10px;
 }
+.botao{
+  display:inline-block;
+  margin-top:12px;
+  background:#FF4D00;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+
+.botao:hover{
+  background:#ff6a2f;
+  transform:translateY(-2px);
+}

@@ -76,6 +76,13 @@ nav a:hover{color:#FF4D00}
   gap:30px;
 }
 
+.titulo-imoveis{
+  text-align:center;   /* centraliza */
+  font-size:28px;      /* tamanho */
+  margin-bottom:20px;  /* espaço abaixo */
+  margin-top:10px;     /* sobe ou desce */
+}
+
 /* CORREÇÃO DOS TÍTULOS (Venda/Aluguel/Temporada) */
 .grid-3 > div h3{
   margin-bottom:10px;

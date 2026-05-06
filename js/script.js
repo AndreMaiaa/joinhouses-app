@@ -16,7 +16,11 @@ function criarCard(imovel){
                 <h3>${imovel.titulo}</h3>
                 <p>${imovel.bairro} - ${imovel.cidade}</p>
                 <p>${imovel.quartos} quartos • ${imovel.area}m²</p>
-                <strong>${formatar(imovel.preco)}</strong>
+                <strong>
+                  ${formatar(imovel.preco)}
+                  ${imovel.periodo === "mensal" ? "/mês" : ""}
+                  ${imovel.periodo === "diaria" ? "/dia" : ""}
+                </strong>
 
                 <a href="imovel.html?id=${imovel.id}" class="botao">
                     Ver detalhes

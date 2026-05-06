@@ -18,6 +18,7 @@ const imoveis = [
     titulo: "Casa para aluguel - Lagoa Nova",
     preco: 2500,
     tipo: "aluguel",
+    periodo: "mensal" 
     bairro: "Lagoa Nova",
     cidade: "Natal",
     quartos: 4,
@@ -32,6 +33,7 @@ const imoveis = [
     titulo: "Flat temporada - Beira Mar",
     preco: 350,
     tipo: "temporada",
+    periodo: "diaria"
     bairro: "Ponta Negra",
     cidade: "Natal",
     quartos: 1,

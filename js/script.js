@@ -57,3 +57,33 @@ imoveis.forEach(imovel => {
     }
 
 });
+
+// FILTRO DE IMÓVEIS
+const botoes = document.querySelectorAll(".filtro-btn");
+const lista = document.getElementById("lista-imoveis");
+
+if(lista && botoes.length){
+
+  botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+
+      // remove ativo
+      botoes.forEach(b => b.classList.remove("ativo"));
+      botao.classList.add("ativo");
+
+      const tipo = botao.getAttribute("data-tipo");
+
+      lista.innerHTML = "";
+
+      imoveis.forEach(imovel => {
+
+        if(tipo === "todos" || imovel.tipo === tipo){
+          lista.insertAdjacentHTML('beforeend', criarCard(imovel));
+        }
+
+      });
+
+    });
+  });
+
+}
